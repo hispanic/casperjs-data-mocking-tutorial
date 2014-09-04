@@ -1,4 +1,4 @@
-casper.test.begin('Test a site scenario.' /*, planned nbr of tests */, {
+casper.test.begin('Test a scenario 1 for the site.' /*, planned nbr of tests */, {
      setUp: function(test) {
           mikeTestCtx.testCase = mikeTestUtils.calcTestCaseName(test.currentTestFile);
 
@@ -38,30 +38,6 @@ casper.test.begin('Test a site scenario.' /*, planned nbr of tests */, {
 
           casper.then(function testThat(){
                
-          });
-
-          /*
-           * Test something.
-           */
-          casper.then(function testSomething(){
-               this.click('#some-link');
-          
-               this.log('Clicked some link. New URL is ' + this.getCurrentUrl(), 'info');
-          
-               /*
-                * Wait for something to appear or change on-screen before 
-                * proceeding.
-                */
-               casper.waitFor(function waitForSomething() {
-                    return this.evaluate(function evaluateSomething() {
-                          return document.querySelector('#something') !== null;
-                    });
-               }
-               , function then() {
-                    mikeTestUtils.screenCapture(mikeTestCtx.testCase, 'something.png');
-          
-                    this.test.assertSelectorHasText('#a-link', 'Some Text');
-               });
           });
 
           casper.run(function runTest() {
