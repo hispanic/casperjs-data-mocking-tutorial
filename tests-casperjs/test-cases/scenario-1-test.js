@@ -60,7 +60,7 @@ casper.test.begin('Test a site scenario.' /*, planned nbr of tests */, {
                , function then() {
                     mikeTestUtils.screenCapture(mikeTestCtx.testCase, 'something.png');
           
-                    this.test.assertSelectorHasText('#a-link', 'Some Text);
+                    this.test.assertSelectorHasText('#a-link', 'Some Text');
                });
           });
 
