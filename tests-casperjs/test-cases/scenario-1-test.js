@@ -40,6 +40,30 @@ casper.test.begin('Test a site scenario.' /*, planned nbr of tests */, {
                
           });
 
+          /*
+           * Test something.
+           */
+          casper.then(function testSomething(){
+               this.click('#some-link');
+          
+               this.log('Clicked some link. New URL is ' + this.getCurrentUrl(), 'info');
+          
+               /*
+                * Wait for something to appear or change on-screen before 
+                * proceeding.
+                */
+               casper.waitFor(function waitForSomething() {
+                    return this.evaluate(function evaluateSomething() {
+                          return document.querySelector('#something') !== null;
+                    });
+               }
+               , function then() {
+                    mikeTestUtils.screenCapture(mikeTestCtx.testCase, 'something.png');
+          
+                    this.test.assertSelectorHasText('#a-link', 'Some Text);
+               });
+          });
+
           casper.run(function runTest() {
                this.log('Test finishing', 'info');
 
