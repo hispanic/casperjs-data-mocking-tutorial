@@ -3,7 +3,7 @@ tests-casperjs
 
 From the top-level tests-casperjs directory, you can run the suite of CasperJS tests with the following command:
 
- casperjs.bat test --includes=_pre-each-test-file.js test-cases
+    casperjs.bat test --includes=_pre-each-test-file.js test-cases
 
 (Just drop the .bat if you aren’t running on Windows. For Windows users, I’ve found that CasperJS runs very nicely via Cygwin.)
 
