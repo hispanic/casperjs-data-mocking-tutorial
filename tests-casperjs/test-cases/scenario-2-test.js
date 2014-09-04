@@ -1,4 +1,4 @@
-casper.test.begin('Test a site scenario.' /*, planned nbr of tests */, {
+casper.test.begin('Test scenario 2 for the site.' /*, planned nbr of tests */, {
      setUp: function(test) {
           mikeTestCtx.testCase = mikeTestUtils.calcTestCaseName(test.currentTestFile);
 
