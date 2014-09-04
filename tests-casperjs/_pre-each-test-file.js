@@ -114,7 +114,7 @@ casper.on('waitFor.timeout', function() {
  * JavaScript on the site that is being tested.
  */
 casper.on('remote.message', function(msg) {
-     this.log('    Logged in remote page DOM -> ' + msg, 'debug');
+     this.log('    Logged in browser -> ' + msg, 'debug');
 });
     
 /*
@@ -122,7 +122,7 @@ casper.on('remote.message', function(msg) {
  * that is being tested. 
  */
 casper.on('remote.alert', function(msg) {
-     this.log('    Alert shown remote page DOM -> ' + msg, 'info');
+     this.log('    Alert shown in browser -> ' + msg, 'info');
 }); 
 
 
